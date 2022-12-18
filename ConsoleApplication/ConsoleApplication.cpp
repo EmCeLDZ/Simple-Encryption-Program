@@ -59,7 +59,7 @@ char* WprowadzenieZnakow(bool rest)
 
 
 	}
-	cin.getline(wiadomosc, 1000000);
+	cin.getline(wiadomosc, 10000000);
 
 	cout << "Wprowadz cyfrowe ziarno:\n";
 	cin >> seed;
@@ -93,7 +93,7 @@ char* WprowadzenieZnakow(bool rest)
 		bool bSwitch;
 		//first case for encrypting a string
 	case 1:
-		for (i = 0; (i < 1000000 && wiadomosc[i] != '\0'); i++)
+		for (i = 0; (i < 10000000 && wiadomosc[i] != '\0'); i++)
 			wiadomosc[i] = wiadomosc[i] + seed; //the key for encryption is 3 that is added to ASCII value
 		cout << "\nZakodowana wiadomosc: " << wiadomosc << endl;
 		bSwitch = Restart();
@@ -109,7 +109,7 @@ char* WprowadzenieZnakow(bool rest)
 		break;
 		//second case for decrypting a string
 	case 2:
-		for (i = 0; (i < 1000000 && wiadomosc[i] != '\0'); i++)
+		for (i = 0; (i < 10000000 && wiadomosc[i] != '\0'); i++)
 			wiadomosc[i] = wiadomosc[i] - seed; //the key for encryption is 3 that is subtracted to ASCII value
 
 		cout << "\nOdkodowana wiadomosc: " << endl << wiadomosc;
